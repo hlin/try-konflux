@@ -4,5 +4,5 @@ WORKDIR /src
 COPY . .
 
 RUN dnf install -y git
-RUN ls -a
+RUN ls -aR
 RUN git tag
