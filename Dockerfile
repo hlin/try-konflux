@@ -1,7 +1,8 @@
 FROM fedora:39
 
-COPY . /src
+WORKDIR /src
+COPY . .
 
 RUN dnf install -y git
-RUN ls -a /src
+RUN ls -a
 RUN git tag
