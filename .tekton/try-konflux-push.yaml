@@ -21,6 +21,8 @@ spec:
     value: '{{source_url}}'
   - name: revision
     value: '{{revision}}'
+  - name: depth
+    value: 100
   - name: output-image
     value: quay.io/redhat-user-workloads/hlin-tenant/try-konflux:{{revision}}
   - name: dockerfile
@@ -161,6 +163,8 @@ spec:
         value: $(params.git-url)
       - name: revision
         value: $(params.revision)
+      - name: depth
+        value: $(params.depth)
       runAfter:
       - init
       taskRef:
