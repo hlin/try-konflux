@@ -1,9 +1,10 @@
 FROM fedora:39
 
+ARG build_date=undefined
+ARG commit_short=undefined
+
 WORKDIR /src
 COPY . .
 
-RUN dnf install -y git
-RUN ls -aR
-RUN git tag
-RUN git log
+RUN echo ${build_date}
+RUN echo ${commit_short}
