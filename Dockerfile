@@ -1,4 +1,4 @@
-FROM fedora:39
+FROM fedora:43
 
 ARG short_commit=unknown
 
