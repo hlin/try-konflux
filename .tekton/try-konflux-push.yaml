@@ -22,7 +22,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: depth
-    value: 100
+    value: "100"
   - name: output-image
     value: quay.io/redhat-user-workloads/hlin-tenant/try-konflux:{{revision}}
   - name: dockerfile
@@ -488,7 +488,8 @@ spec:
       optional: true
     - name: netrc
       optional: true
-  taskRunTemplate: {}
+  taskRunTemplate:
+    serviceAccountName: build-pipeline-try-konflux
   workspaces:
   - name: workspace
     volumeClaimTemplate:
